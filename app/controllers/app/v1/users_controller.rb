@@ -1,8 +1,8 @@
-class UsersController < ApplicationController
+class Api::V1::UsersController < ApplicationController
 
   def index
     users = User.all
-    render json: users, include: [:commodity, :user]
+    render json: users
   end
 
   def show

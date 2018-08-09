@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :permissions
-  resources :locations
-  resources :messages
-  resources :users
+  namespace 'api' do
+    namespace 'v1' do
+      resources :permissions
+      resources :locations
+      resources :messages
+      resources :users
+    end
+  end 
 end
